@@ -44,14 +44,12 @@ def countPlayers(scores):
 
 #update scoreboard with new or changed player data 
 def updateScoreBoard(name, score, level):
-	print ('updating scoreboard')
 	# get current scoreboard
 	scores=readScoreboard()
 
 	# update player highscore (or add new one if doesn't exist)
 	if name in scores:
 		if int(score)<int(scores[name]['Score']):
-			print('not updating highscore for',name)
 			return
 
 	scores[name]={'Score': score, 'Level': level}
@@ -95,7 +93,7 @@ def displayScoreBoard():
 
 		cv2.putText(img, "Select p to play", (img_width//2-65, y), font, 0.5, colour, thickness, cv2.LINE_AA)
 
-		cv2.imshow('image', img)
+		cv2.imshow('Pong', img)
 
 		selectKey=cv2.waitKey(0)
 		if selectKey==ord('p'):
@@ -106,7 +104,7 @@ def displayScoreBoard():
 
 if __name__ == '__main__':
 	img = displayScoreBoard()
-	cv2.imshow('image', img)
+	cv2.imshow('Pong', img)
 	cv2.waitKey(0)
 
 

@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
 	condition1=True #will run until 'q' key is pressed to quit
 	while(condition1):
-		cv2.imshow("image", getHomeScreen()) # Show home screen in the beginning
+		cv2.imshow("Pong", getHomeScreen()) # Show home screen in the beginning
 
 		key=cv2.waitKey(0)
 
@@ -248,7 +248,7 @@ if __name__ == '__main__':
 
 
 
-					cv2.imshow('image', img)
+					cv2.imshow('Pong', img)
 
 					if key==ord('q'):
 						quit()
